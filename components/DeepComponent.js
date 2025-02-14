@@ -9,7 +9,7 @@ function DeepComponent() {
       <div>
         {locale}
         {t("us")}
-        <h1>{t("welcome")}</h1>
+        <h1>{t("homePage_apierror")}</h1>
         <p>{t("hello")}</p>
       </div>
     </div>

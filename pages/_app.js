@@ -6,7 +6,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     console.log(pageProps, 999999);
     return (
-      <LanguageProvider lang={pageProps.lang}>
+      <LanguageProvider lang={pageProps.lang} langPack={pageProps.langPack}>
         <Component {...pageProps} />
       </LanguageProvider>
     );

@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import { getTranslation } from "../langFile/lang";
 
 const LanguageContext = createContext();
-
+  
 class LanguageProvider extends Component {
   constructor(props) {
     console.log(Object.keys(props), "7788");
@@ -25,7 +25,7 @@ class LanguageProvider extends Component {
         value={{
           locale: this.state.locale,
           switchLanguage: this.switchLanguage,
-          t: (key) => getTranslation(this.props.lang, key), // 透過 t() 取得翻譯
+          t: (key) => getTranslation(this.props.langPack, key), // 透過 t() 取得翻譯
         }}
       >
         {this.props.children}

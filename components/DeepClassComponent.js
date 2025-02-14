@@ -6,9 +6,8 @@ export default class DeepClassComponent extends React.Component {
   logHello = () => {
     console.log(this.context.t("hello")); // ✅ 正確存取 context
   };
-
+  componentDidMount() {}
   render() {
-    console.log(this.context.t, "??2?");
     const { t } = this.context;
     return (
       <div>
