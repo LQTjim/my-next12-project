@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import App from "next/app";
+import LanguageProvider from "../context/LanguageContext";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    console.log(pageProps, 999999);
+    return (
+      <LanguageProvider lang={pageProps.lang}>
+        <Component {...pageProps} />
+      </LanguageProvider>
+    );
+  }
 }
 
-export default MyApp
+export default MyApp;
